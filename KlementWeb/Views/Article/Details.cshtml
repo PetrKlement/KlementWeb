@@ -1,0 +1,23 @@
+﻿@model KlementWeb.Models.ArticleViewModels.ArticleViewModel
+
+@{ ViewData["Title"] = "Detail"; }
+
+<h1>@Html.DisplayFor(model => model.Title)</h1>
+
+<div>
+    <hr />
+        <p style="font-size: 25px; color: darkred">
+            @Html.DisplayFor(model => model.Description)
+        </p>
+        @{ string path = $"~/pictures/articles/{Model.Id}_picture.jpeg"; 
+           <p><img src="@Url.Content(path)" alt="Ilustrační foto" class="article_detail"/></p>
+        }
+        <p style="font-size: 20px">
+            @Html.DisplayFor(model => model.Content)
+        </p>
+</div>
+<div>
+    @if (User.IsInRole("Admin"))
+    {<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Upravit</a>}
+    <a asp-action="Index" class="btn btn-primary">Zpět na seznam</a>
+</div>

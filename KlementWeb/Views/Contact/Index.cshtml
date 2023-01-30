@@ -1,0 +1,35 @@
+﻿@model KlementWeb.Models.ContactViewModel
+@{ ViewData["Title"] = "Kontaktujte nás"; }
+
+<div class="col-md-3"></div>
+<h2>Kontaktujte nás</h2>
+<div class="col-md-2"></div>
+<div class="col-md-5">
+    <section>
+        <form asp-action="Index" asp-controller="Contact" method="post" asp-route-returnurl="@ViewData["ReturnUrl"]">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="SenderEmail"></label>
+                <input asp-for="SenderEmail" class="form-control" />
+                <span asp-validation-for="SenderEmail" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Subject"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="MessageBody"></label>
+                <textarea asp-for="MessageBody" class="form-control"></textarea>
+                <span asp-validation-for="MessageBody" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Odeslat" class="btn btn-default" />
+            </div>
+        </form>
+    </section>
+</div>

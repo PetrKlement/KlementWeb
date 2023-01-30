@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Administrace účtu";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<p>Vítejte v administraci, jste přihlášeni jako @User.Identity.Name</p>
+<div>
+    <a asp-action="ChangePassword"
+       class="btn btn-info">Změna hesla</a>
+
+    <a asp-action="LogOut"
+       class="btn btn-info">Odhlásit se</a>
+</div>
+
