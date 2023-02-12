@@ -1,5 +1,5 @@
 # O webu 
-Aplikace poslední z mých projektů a je založena na .NET frameworku, konkrétně při využití ASP.NET Core. Je rozdělena do částí články, o mně, kontakt, správy uživatele a administrátorské sekce. Web lze vyzkoušet na mých stránkách www.klementpetr.cz.
+Aplikace je poslední z mých projektů a je založena na .NET frameworku, konkrétně při využití ASP.NET Core. Je rozdělena do částí články, o mně, kontakt, správy uživatele a administrátorské sekce. Web lze vyzkoušet na mých stránkách www.klementpetr.cz.
 
 # Uživatel
 Správa uživatelů, rolí a autorizace vychází z ASP.NET Identity. Návštěvník stránky po přihlášení (nebo prvotní registraci) může spravovat svůj účet. Práva jsou rozdělena do rolí, tedy například editace či vytváření článků může provádět pouze admin.
